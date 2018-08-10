@@ -2,7 +2,7 @@
 
 ## Overview
 
-Ballerina tooling currently includes a standalone IDE called Ballerina Composer and also offers IDE plugins for Visual Studio Code and IntelliJ IDEA. 
+Ballerina tooling currently includes a standalone IDE called Ballerina Composer and also offers IDE plugins for Visual Studio Code and IntelliJ IDEA. In addion to IDE tools, there are a few command line tools available to help with package management, tests, documentation generation and Swagger/OpenAPI support.
 
 ### Ballerina Composer
 
@@ -150,7 +150,8 @@ Code Actions, Rename, Add Imports, Add Documentation, Add Undefined Functions, C
 ## Testing Ballerina Programs
 
 * Now let’s write a unit test for a Ballerina service.
-* Create a new Ballerina Project with the ballerina init -i command.
+* A test skeleton is generated with the ballerina init -i command.
+* To run tests for a package execute command `ballerina test <package-name>`
 
 ```
 my_project
@@ -163,6 +164,50 @@ my_project
 ```
 
 For more info on testing Ballerina code, please refer to [the guide](https://ballerina.io/learn/how-to-test-ballerina-code/) available in ballerina.io.
+
+## Package Management
+
+Through Ballerina Central (https://central.ballerina.io) you can share your packages with Ballerina Community and pull packages shared by others.
+
+### Setting Up for pushing
+
+* Login to Ballerina Central and create an organization. Now you can get the access token from https://central.ballerina.io/dashboard .
+* Get your access token and add this to Settings.toml (<USER_HOME/.ballerina)
+
+### Pushing a package
+
+* Now Let’s publish your package to Ballerina Central.
+Go to Your project and open Ballerina.toml and change the org-name config accordingly.
+* Now go to your project root and build your package with following Command 
+`ballerina build <your_package_name>`
+* This will build your package and now you can publish your package to Ballerina Central with the following Command
+`ballerina push <your_package_name>`
+* Go to Ballerina Central and you can see the published package
+
+### Pulling Packages
+
+* If you need to use an already published package to Ballerina Central, you can pull a package.
+* In order to pull a package from central with the following commands
+ballerina pull `<org_name>/<package_name>:<version>` (Pull a specific version)
+* `ballerina pull <org_name>/<package_name>` (Pull the latest version)
+
+For more info on package management in Ballerina, please refer to [the guide](https://ballerina.io/learn/how-to-publish-packages/) available in ballerina.io.
+
+## API Doc Generation
+
+* You can use the doc generator tool to generate API Docs for your Projects. Ballerina Documentation is part of the Language Syntax itself and Documentation Block Support markdown syntax with some additional tags to refer parameters and attributes.
+
+* Now let’s generate API Docs for your package.
+Go to your example project root and enter following command
+`ballerina doc <package_name>`
+
+* If you need to generate API Docs for the whole project use the following command
+`ballerina doc`
+
+* Now go to the target directory in your project and you can find the generate API Docs under api-docs directory
+
+
+For more info on documenting Ballerina code, please refer to [the guide](https://ballerina.io/learn/how-to-document-ballerina-code/) available in ballerina.io.
 
 ## Exploring Ballerina Composer
 
@@ -208,51 +253,6 @@ Now let’s switch over to Ballerina Composer and explore several features it pr
 * Invoke the service from Try It and click on the Trace Log option next to Console. You can see the inbound and outbound Trace Logs for your service invocation.
 
 ![Trace Logs in Ballerina Composer](/images/trace-logs.png)
-
-
-## Package Management
-
-Through Ballerina Central (https://central.ballerina.io) you can share your packages with Ballerina Community and pull packages shared by others.
-
-### Setting Up for pushing
-
-* Login to Ballerina Central and create an organization. Now you can get the access token from https://central.ballerina.io/dashboard .
-* Get your access token and add this to Settings.toml (<USER_HOME/.ballerina)
-
-### Pushing a package
-
-* Now Let’s publish your package to Ballerina Central.
-Go to Your project and open Ballerina.toml and change the org-name config accordingly.
-* Now go to your project root and build your package with following Command 
-`ballerina build <your_package_name>`
-* This will build your package and now you can publish your package to Ballerina Central with the following Command
-`ballerina push <your_package_name>`
-* Go to Ballerina Central and you can see the published package
-
-### Pulling Packages
-
-* If you need to use an already published package to Ballerina Central, you can pull a package.
-* In order to pull a package from central with the following commands
-ballerina pull `<org_name>/<package_name>:<version>` (Pull a specific version)
-* `ballerina pull <org_name>/<package_name>` (Pull the latest version)
-
-For more info on package management in Ballerina, please refer to [the guide](https://ballerina.io/learn/how-to-publish-packages/) available in ballerina.io.
-
-## API Doc Generation
-
-* You can use the doc generator tool to generate API Docs for your Projects. Ballerina Documentation is part of the Language Syntax itself and Documentation Block Support markdown syntax with some additional tags to refer parameters and attributes.
-
-* Now let’s generate API Docs for your package.
-Go to your example project root and enter following command
-`ballerina doc <package_name>`
-
-* If you need to generate API Docs for the whole project use the following command
-`ballerina doc`
-
-* Now go to the target directory in your project and you can find the generate API Docs under api-docs directory
-
-
-For more info on documenting Ballerina code, please refer to [the guide](https://ballerina.io/learn/how-to-document-ballerina-code/) available in ballerina.io.
 
 ## Swagger / Open API Support
 
