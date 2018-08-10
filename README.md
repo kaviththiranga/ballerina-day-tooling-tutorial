@@ -53,25 +53,32 @@ Now that you have chosen your IDE, let’s proceed with creation of a project.
 
 * In your terminal, goto the directory you want the project to be created in and execute _ballerina init_ command to create a new Ballerina project. `init` command will create the initial Ballerina project structure as below.
 
-```
-project_dir
-  ├── Ballerina.toml
+```console
+MacBook-Pro:demo kavith$ mkdir hello_project
+MacBook-Pro:demo kavith$ cd hello_project/
+MacBook-Pro:hello_project kavith$ ballerina init
+Ballerina project initialized
+
+MacBook-Pro:hello_project kavith$ tree
+.
+├── Ballerina.toml
+└── hello_service.bal
+
+0 directories, 2 files
 ```
 
-For more info on structure of Ballerina projects, please refer to [the guide](https://ballerina.io/learn/how-to-structure-ballerina-code/) available in ballerina.io.
-
-* _ballerina init **-i**_ lets you to customize the project generation wizard. It allows you to generate Ballerina services and test skeletons to start with.
+* _ballerina init **-i**_ lets you to customize the project generation wizard. It allows you to generate Ballerina services/test skeletons along with packages to start development rightaway.
 
 ```console
 MacBook-Pro:hello-service kavith$ ballerina init -i
 Create Ballerina.toml [yes/y, no/n]: (y) y
-Organization name: (kavithlokuhewage) kavith-demo
+Organization name: (kavith) kavith-demo
 Version: (0.0.1)
 Ballerina source [service/s, main/m, finish/f]: (f) s
 Package for the service : (no package) demo
 Ballerina source [service/s, main/m, finish/f]: (f) f
-
 Ballerina project initialized
+
 MacBook-Pro:hello-service kavith$ tree
 .
 ├── Ballerina.toml
@@ -84,6 +91,10 @@ MacBook-Pro:hello-service kavith$ tree
 2 directories, 4 files
 
 ```
+
+
+For more information on the structure of Ballerina projects, please refer to [the guide](https://ballerina.io/learn/how-to-structure-ballerina-code/) available in ballerina.io.
+
 * Open the created project in your IDE (This tutorial assumes you are using VSCode) and open *hello_service.bal* file in the editor. This file will by default contain a hello world service created by ballerina init command.
 
 
