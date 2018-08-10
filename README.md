@@ -60,8 +60,30 @@ project_dir
 
 For more info on structure of Ballerina projects, please refer to [the guide](https://ballerina.io/learn/how-to-structure-ballerina-code/) available in ballerina.io.
 
-* _ballerina init **-i**_ lets you to customize the project generation wizard. It allows you to generate Ballerina service and test skeletons to start with.
+* _ballerina init **-i**_ lets you to customize the project generation wizard. It allows you to generate Ballerina services and test skeletons to start with.
 
+```console
+MacBook-Pro:hello-service kavith$ ballerina init -i
+Create Ballerina.toml [yes/y, no/n]: (y) y
+Organization name: (kavithlokuhewage) kavith-demo
+Version: (0.0.1)
+Ballerina source [service/s, main/m, finish/f]: (f) s
+Package for the service : (no package) demo
+Ballerina source [service/s, main/m, finish/f]: (f) f
+
+Ballerina project initialized
+MacBook-Pro:hello-service kavith$ tree
+.
+├── Ballerina.toml
+└── demo
+    ├── Package.md
+    ├── hello_service.bal
+    └── tests
+        └── hello_service_test.bal
+
+2 directories, 4 files
+
+```
 * Open the created project in your IDE (This tutorial assumes you are using VSCode) and open *hello_service.bal* file in the editor. This file will by default contain a hello world service created by ballerina init command.
 
 
