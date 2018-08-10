@@ -25,10 +25,16 @@ We currently provide plugins for Visual Studio Code and IntelliJ IDEA. To instal
 * Plugin details page show in-detail instructions for setting up.
 * As explained in plugin description, set ballerina.home config and point it to Ballerina installation director.
 
+Only stable releases will be available via extensions registry. To install other versions (eg: nightlies), please download the plugin from www.ballerina.io/downloads and [use the option to install from file](https://vscode-docs.readthedocs.io/en/stable/extensions/install-extension/#install-a-packaged-extension-vsix).
+
+
+
 #### IntelliJ IDEA (IDEA)
 
 * Go to Preferences -> Plugins and type “Ballerina” in search box. 
 * Then click on  “search in repositories”
+
+Only stable releases will be available via Plugins registry. To install other versions (eg: nightlies), please download the plugin from www.ballerina.io/downloads and [use the option to install from file](https://www.jetbrains.com/help/idea/managing-plugins.html#installing-plugins-from-disk).
 
 
 > Which one should I use?
@@ -165,6 +171,24 @@ my_project
 
 For more info on testing Ballerina code, please refer to [the guide](https://ballerina.io/learn/how-to-test-ballerina-code/) available in ballerina.io.
 
+## API Doc Generation
+
+* You can use the doc generator tool to generate API Docs for your Projects. Ballerina Documentation is part of the Language Syntax itself and Documentation Block Support markdown syntax with some additional tags to refer parameters and attributes.
+
+* Now let’s generate API Docs for your package.
+Go to your example project root and enter following command
+`ballerina doc <package_name>`
+
+* If you need to generate API Docs for the whole project use the following command
+`ballerina doc`
+
+* Now go to the target directory in your project and you can find the generate API Docs under api-docs directory
+
+
+For more info on documenting Ballerina code, please refer to [the guide](https://ballerina.io/learn/how-to-document-ballerina-code/) available in ballerina.io.
+
+
+
 ## Package Management
 
 Through Ballerina Central (https://central.ballerina.io) you can share your packages with Ballerina Community and pull packages shared by others.
@@ -192,22 +216,6 @@ ballerina pull `<org_name>/<package_name>:<version>` (Pull a specific version)
 * `ballerina pull <org_name>/<package_name>` (Pull the latest version)
 
 For more info on package management in Ballerina, please refer to [the guide](https://ballerina.io/learn/how-to-publish-packages/) available in ballerina.io.
-
-## API Doc Generation
-
-* You can use the doc generator tool to generate API Docs for your Projects. Ballerina Documentation is part of the Language Syntax itself and Documentation Block Support markdown syntax with some additional tags to refer parameters and attributes.
-
-* Now let’s generate API Docs for your package.
-Go to your example project root and enter following command
-`ballerina doc <package_name>`
-
-* If you need to generate API Docs for the whole project use the following command
-`ballerina doc`
-
-* Now go to the target directory in your project and you can find the generate API Docs under api-docs directory
-
-
-For more info on documenting Ballerina code, please refer to [the guide](https://ballerina.io/learn/how-to-document-ballerina-code/) available in ballerina.io.
 
 ## Exploring Ballerina Composer
 
