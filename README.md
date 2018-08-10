@@ -75,15 +75,18 @@ Ballerina Language server is the component which is providing the language smart
 
 ### Diagnostics
 
-![Inline Diagnostics in Ballerina LS](/images/diagnostic-inline.png)
+![Inline Diagnostics in Ballerina LS](./images/diagnostic-inline.png)
 
 ![Diagnostics View in Ballerina LS](/images/diagnostic-problems-view.png)
 
 ### Completions
 
+
 ![Completions in Ballerina LS](/images/completion-service.png)
 
 ![Completions in Ballerina LS](/images/completion-pkg-types.png)
+
+![Completions in Ballerina LS](/images/completion-functions.png)
 
 ### Refactor support
 
