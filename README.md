@@ -98,6 +98,36 @@ MacBook-Pro:hello-service kavith$ tree
 
 ```
 
+### Project Stucture
+
+```
+/
+  .gitignore
+  Ballerina-lock.toml  # Generated during build, used to rebuild identical binary
+  Ballerina.toml       # Configuration that defines project intent
+  .ballerina/          # Internal cache management and contains project repository
+                       # Project repository is built or downloaded package dependencies
+
+  main.bal             # Part of the “unnamed” package, compiled into a main.balx
+                       # You can have many files in the "unnamed" package, though unadvisable
+
+  package1/            # The source in this directory will be named “<org-name>/package1” 
+    Package.md         # Optional, contains descriptive metadata for display at Ballerina Central
+    *.bal              # In this dir and recursively in subdirs except tests/ and resources/
+    [tests/]           # Package-specific unit and integration tests
+    [resources/]       # Package-specific resources
+
+  packages.can.include.dots.inthe.dir.name/
+    Package.md
+    *.bal
+    [tests/]         
+    [resources/]     
+
+  target/              # Compiled binaries and other artifacts end up here
+      main.balx
+
+```
+
 
 For more information on the structure of Ballerina projects, please refer to [the guide](https://ballerina.io/learn/how-to-structure-ballerina-code/) available in ballerina.io.
 
