@@ -1,3 +1,38 @@
+
+
+<!-- toc -->
+
+- [Ballerina Day: Tooling Tutorial](#ballerina-day-tooling-tutorial)
+  * [Overview](#overview)
+    + [Ballerina Composer](#ballerina-composer)
+    + [IDE plugins](#ide-plugins)
+      - [Visual Studio Code (VSCode)](#visual-studio-code-vscode)
+      - [IntelliJ IDEA (IDEA)](#intellij-idea-idea)
+  * [How to start writing a program?](#how-to-start-writing-a-program)
+    + [Project Stucture](#project-stucture)
+  * [Exploring the Intellisense and Diagnostic capabilities](#exploring-the-intellisense-and-diagnostic-capabilities)
+    + [Diagnostics](#diagnostics)
+    + [Completions](#completions)
+    + [Refactor support](#refactor-support)
+    + [Go to Definition](#go-to-definition)
+    + [Find References](#find-references)
+    + [Signature Help](#signature-help)
+    + [Hover Support](#hover-support)
+  * [Testing Ballerina Programs](#testing-ballerina-programs)
+  * [API Doc Generation](#api-doc-generation)
+  * [Package Management](#package-management)
+    + [Setting Up for pushing](#setting-up-for-pushing)
+    + [Pushing a package](#pushing-a-package)
+    + [Pulling Packages](#pulling-packages)
+  * [Exploring Ballerina Composer](#exploring-ballerina-composer)
+    + [Debugging Ballerina Programs](#debugging-ballerina-programs)
+    + [Design View](#design-view)
+    + [Try It](#try-it)
+    + [Trace Logs](#trace-logs)
+  * [Swagger / Open API Support](#swagger--open-api-support)
+
+<!-- tocstop -->
+
 #  Ballerina Day: Tooling Tutorial
 
 ## Overview
